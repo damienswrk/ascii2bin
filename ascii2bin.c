@@ -13,7 +13,7 @@ int main (int argc, char * argv[], char ** envp) {
     retval = read(0, &ascii_value, 1);
     while (retval == 1){
           // printf("%c\n",ascii_value);//remove this later
-        if (ascii_value == 10 || ascii_value == 13){
+        if (ascii_value == 10){
          break;
         }
         if (ascii_value != '0' && ascii_value != '1'){
@@ -26,7 +26,7 @@ int main (int argc, char * argv[], char ** envp) {
         retval = read(0, &ascii_value, 1);
     }
     if(returnValue==0){
-        printf("%d\n", number);
+        printf("%u\n", number);
     }
     return returnValue;
 
